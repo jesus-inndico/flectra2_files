@@ -1,0 +1,41 @@
+<flectra>
+    <data>
+        <!-- <template id="listing"> -->
+        <!--   <ul> -->
+        <!--     <li t-foreach="objects" t-as="object"> -->
+        <!--       <a t-attf-href="#{ root }/objects/#{ object.id }"> -->
+        <!--         <t t-esc="object.display_name"/> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!--   </ul> -->
+        <!-- </template> -->
+        <!-- <template id="object"> -->
+        <!--   <h1><t t-esc="object.display_name"/></h1> -->
+        <!--   <dl> -->
+        <!--     <t t-foreach="object._fields" t-as="field"> -->
+        <!--       <dt><t t-esc="field"/></dt> -->
+        <!--       <dd><t t-esc="object[field]"/></dd> -->
+        <!--     </t> -->
+        <!--   </dl> -->
+        <!-- </template> -->
+        <!-- <template id="session_info">
+                <t t-set="title">MOPI selector redirect page</t>                 
+                    <div class="oe_structure">                    
+                        <div class="container">                        
+                            <t t-foreach="session_info._fields" t-as="field">
+                                <dt><t t-esc="field"/></dt> 
+                                <dd><t t-esc="session_info[field]"/></dd>
+                            </t>                    
+                        </div>
+                    </div>
+        </template> -->
+        <template id="mi_template">
+    <!-- ... otro contenido de la plantilla ... -->
+    <t t-foreach="session_info" t-as="session_item">
+        <p><t t-esc="session_item.session_id"/></p>
+    </t>
+    <!-- ... otro contenido de la plantilla ... -->
+</template>
+
+    </data>
+</flectra>
